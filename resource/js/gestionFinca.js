@@ -141,10 +141,11 @@ function buscarFinca(codigo) {
 }
 
 function listMunicipios() {
+    console.log($('#txtDepto').val())
     $.ajax({
         type: 'post',
         url: "controller/ctlList.php",
-        data: { type: 'loadListMuni' },
+        data: { type: 'loadListMuni', depto: $('#txtDepto').val()},
         success: function (response) {
             var aux= JSON.parse(response)
             var municipios = JSON.parse(aux.data);
