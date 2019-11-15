@@ -10,10 +10,10 @@ class vacaDAO {
     }
 
     public function guardar(clsVaca $obj){
-        $sql = "INSERT INTO Vaca(idVaca,peso,edad,nombreVaca,crias,num_ordenada,Finca_idFinca) "
-        . "VALUES ('" . $obj->getIdVaca() . "'," . $obj->getPeso() . ","  . 
-        $obj->getEdad(). ","  . $obj->getNombreVaca() . ","  . $obj->getCrias() . ",'"  . 
-        $obj->getNum_ordenada() . $obj->getIdFinca() . "')";
+        $sql = "INSERT INTO Vaca(peso,edad,nombreVaca,crias,num_ordenada,Finca_idFinca) "
+        . "VALUES (". $obj->getPeso() . "," . $obj->getEdad(). ",'" . 
+        $obj->getNombreVaca() . "'," . $obj->getCrias() . ","  . 
+        $obj->getNum_ordenada(). "," . $obj->getIdFinca() . ")";
         $this->objCon->ExecuteTransaction($sql);
     }
 
@@ -31,15 +31,14 @@ class vacaDAO {
     }
 
     public function modificar(clsVaca $obj){
-        $sql = "UPDATE Vaca SET nombreVaca='" . $obj->getNombreVaca() . "',peso=" . 
-            $obj->getpeso() . ",edad="  . $obj->getEdad() . 
-            ",nombreVaca="  . $obj->getNombreVaca() . ",crias="  . $obj->getCrias() . 
-            ",num_ordenada='"  . $obj->getNum_ordenada() . "' where idVaca=" . $obj->getIdVaca() ."";
+        $sql = "UPDATE Vaca SET peso=" . $obj->getpeso() . ",edad=" . 
+        $obj->getEdad() . ",nombreVaca='"  . $obj->getNombreVaca() . "',crias=" . 
+        $obj->getCrias() . ",num_ordenada="  . $obj->getNum_ordenada() . " where idVaca=" . $obj->getIdVaca() ."";
         $this->objCon->ExecuteTransaction($sql);
     }
     
     public function listar(){
-        $sql = "SELECT idVaca,peso,edad,nombreVaca,crias,num_ordenada,Finca_idFinca from Vaca V 
+        $sql = "SELECT idVaca,peso,edad,nombreVaca,crias,num_ordenada,nombreFinca from Vaca V 
         join Finca F on V.Finca_idFinca = F.idFinca";
         $this->objCon->Execute($sql);
     }

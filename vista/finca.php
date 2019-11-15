@@ -18,7 +18,7 @@
 </head>
 
 <body>
-
+    <br><br><br><br><br>
     <div class="row">
         <div class="col-sm-6">
             <div class="card">
@@ -111,19 +111,17 @@
                             <td>
                             </td>
                             <td>
-                                <input type="button" value="Guardar" id="btnGuardar">
-                                <input type="button" value="Buscar" id="btnBuscar">
+                                <input class="btn btn-success" type="button" value="Guardar" id="btnGuardar">
+                                <input class="btn btn-outline-dark" type="button" value="Limpiar" id="btnLimpiar">
+                                <!-- <input type="button" value="Buscar" id="btnBuscar"> -->
                             </td>
                         </tr>
                         <tr>
                             <td>
                             </td>
                             <td>
-                                <input type="button" value="Modificar" id="btnModificar">
-                                <input type="button" value="Eliminar" id="btnEliminar">
-                            </td>
-                            <td>
-                                <input type="button" value="Limpiar" id="btnLimpiar">
+                                <input class="btn btn-warning" type="button" value="Modificar" id="btnModificar">
+                                <input class="btn btn-danger" type="button" value="Eliminar" id="btnEliminar">
                             </td>
                         </tr>
                     </table>

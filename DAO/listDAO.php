@@ -18,4 +18,9 @@ class listDAO {
         $sql = "SELECT * from Municipio where Departamento_idDepartamento = " . $valor;
         $this->objCon->Execute($sql);
     }
+
+    public function listFinca(){
+        $sql = "SELECT * from Finca";
+        $this->objCon->Execute($sql);
+    }
 }

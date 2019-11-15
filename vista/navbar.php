@@ -19,9 +19,9 @@
                 <li class="nav-item">
                     <a class="nav-link js-scroll-trigger" href="index.php?page=muni">CRUD Muni</a>
                 </li>
-                <!-- <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="index.php?page=imc">IMC</a>
-                </li> -->
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="index.php?page=">Log-in</a>
+                </li>
             </ul>
         </div>
     </div>

@@ -15,6 +15,7 @@
     <script type="text/javascript" src="resource/jquery/jquery.js"></script>
     <script type="text/javascript" src="resource/js/cargarList.js"></script>
     <script type="text/javascript" src="resource/js/gestionFinca.js"></script>
+    <script type="text/javascript" src="resource/js/gestionVaca.js"></script>
 </head>
 
 <body>
