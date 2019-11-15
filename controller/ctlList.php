@@ -2,10 +2,10 @@
 
 include '../DAO/listDAO.php';
 
-    $type = isset($_POST['type']) ? $_POST['type'] : "";
-    $depto = isset($_POST['depto']) ? $_POST['depto'] : "";
+$type = isset($_POST['type']) ? $_POST['type'] : "";
+$depto = isset($_POST['depto']) ? $_POST['depto'] : "";
 
-    $conex = new listDAO();
+$conex = new listDAO();
 
 switch ($type) {
     case "loadListDepto":
@@ -13,5 +13,8 @@ switch ($type) {
         break;
     case "loadListMuni":
         $conex->listMuni($depto);
+        break;
+    case "loadListFinca":
+        $conex->listFinca();
         break;
 }
