@@ -42,7 +42,7 @@ class fincaDAO {
     public function listar(){
         $sql = "SELECT idFinca,nombreFinca,tamanio,nombreMpio,nombreDepto,cantidad,piscina,descripcion from Finca F 
         join Municipio M on F.Municipio_idMunicipio = M.idMunicipio 
-        join Departamento D on M.Departamento_idDepartamento = D.idDepartamento where F.usuario ='" . $_SESSION["user"] ."'";
+        join Departamento D on M.Departamento_idDepartamento = D.idDepartamento";
         $this->objCon->Execute($sql);
     }
 }

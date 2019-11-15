@@ -14,7 +14,7 @@ $conex = new loginDAO();
 
 switch ($accion) {
     case "con":
-        $conex->loguear($login);
+        $conex->logear($login);
         break;
 
     case "desc";

@@ -11,9 +11,9 @@ class loginDAO {
     }
 
     public function logear(clsLogin $obj) {
-        $sql = "SELECT nickname,password from usuario where"
-        . "nickname='" . $obj->getUsuario() . "'and "
-        . "password='" . md5($obj->getPassword()) . "'";
+        $sql = "SELECT nickname,password from usuario where "
+        . "nickname='" . $obj->getUsuario() . "' and "
+        . "password='" . $obj->getPassword() . "'";
 
         $resultado = $this->objCon->getConnect()->prepare($sql);
         $resultado->execute();

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="text/javascript" src="resource/js/gestionLogin.js"></script>
     <title>Document</title>
 </head>
 
@@ -34,7 +35,7 @@
                 </td>
                 <td>
                     <input type="button" value="Login" id="btnLogin"
-                    onclick="validarLogin(formularioLogin,'con'">
+                    onclick="validarLogin(formularioLogin,'con')">
                 </td>
             </tr>
         </table>
