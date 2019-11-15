@@ -31,7 +31,7 @@ class vacaDAO {
     }
 
     public function modificar(clsVaca $obj){
-        $sql = "UPDATE Vaca SET peso=" . $obj->getpeso() . ",edad=" . 
+        $sql = "UPDATE Vaca SET peso=" . $obj->getPeso() . ",edad=" . 
         $obj->getEdad() . ",nombreVaca='"  . $obj->getNombreVaca() . "',crias=" . 
         $obj->getCrias() . ",num_ordenada="  . $obj->getNum_ordenada() . " where idVaca=" . $obj->getIdVaca() ."";
         $this->objCon->ExecuteTransaction($sql);
