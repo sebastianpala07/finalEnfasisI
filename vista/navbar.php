@@ -8,19 +8,19 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto my-2 my-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="index.php?page=finca">CRUD Fincas</a>
+                    <a class="nav-link js-scroll-trigger" href="masterpage.php?page=finca">CRUD Fincas</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="index.php?page=vaca">CRUD Vacas</a>
+                    <a class="nav-link js-scroll-trigger" href="masterpage.php?page=vaca">CRUD Vacas</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="index.php?page=depto">CRUD Depto</a>
+                    <a class="nav-link js-scroll-trigger" href="masterpage.php?page=depto">CRUD Depto</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="index.php?page=muni">CRUD Municipio</a>
+                    <a class="nav-link js-scroll-trigger" href="masterpage.php?page=muni">CRUD Municipio</a>
                 </li>
                 <!-- <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="index.php?page=">Log-out</a>
+                    <a class="nav-link js-scroll-trigger" href="masterpage.php?page=">Log-out</a>
                 </li> -->
             </ul>
         </div>
