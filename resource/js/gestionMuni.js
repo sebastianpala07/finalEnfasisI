@@ -1,27 +1,28 @@
 $(document).ready(function() {
     listarMuni();
-    $("#btnGuardarV").click(guardarMuni);
-    $("#btnModificarV").click(guardarMuni);
-    $("#btnEliminarV").click(eliminarMuni);
-    $("#btnLimpiarV").click(limpiar);
+    $("#btnGuardarM").click(guardarMuni);
+    $("#btnModificarM").click(guardarMuni);
+    $("#btnEliminarM").click(eliminarMuni);
+    $("#btnLimpiarM").click(limpiar);
   });
   
   function guardarMuni() {
     let objMuni = {
       idMunicipio: $("#txtIdMunicipio").val(),
       nombreMpio: $("#txtNombre_Muni").val(),
-      Departamento_idDepartamento: $("#txtSeleDepto").val(),
+      Departamento_idDepartamento: $("#txtDepto").val(),
       type: ""
     };
     if (
       objMuni.nombreMpio !== "" &&
       objMuni.Departamento_idDepartamento !== ""
     ) {
-      if (objMuni.idMunicipio !== "") {
+      if (objMuni.idMunicipio) {
         objMuni.type = "update";
       } else {
         objMuni.type = "save";
       }
+    //   console.log(objMuni.type)
       $.ajax({
         type: "post",
         url: "controller/ctlMuni.php",
@@ -116,7 +117,7 @@ $(document).ready(function() {
         }
         if (info.msj === "Success") {
           $("#txtNombre_Muni").val(data[0].nombreMpio);
-          $("#txtSeleDepto").val(data[0].Departamento_idDepartamento);
+          $("#txtDepto").val(data[0].Departamento_idDepartamento);
         //   $("#txtNombre").val(data[0].nombreVaca);
         //   $("#txtCrias").val(data[0].crias);
         //   $("#txtNum_ordenada").val(data[0].num_ordenada);
@@ -167,5 +168,5 @@ $(document).ready(function() {
   
   function limpiar() {
     $("#txtNombre_Muni").val("");
-    $("#txtSeleDepto").val(0);
+    $("#txtDepto").val(0);
   }

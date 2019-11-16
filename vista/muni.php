@@ -50,7 +50,7 @@
                             </td>
                             <td colspan="2">
                                 <div class="form-group">
-                                    <select class="form-control" id="txtSeleDepto" name="finca" ></select>
+                                    <select class="form-control" id="txtDepto" name="depto" ></select>
                                 </div>
                             </td>
                         </tr>

@@ -16,7 +16,7 @@ class muniDAO {
     }
 
     public function buscar(clsMuni $obj){
-        $sql = "SELECT idMunicipio,nombreMpio,Departamento_idDepartamento from Municipio M 
+        $sql = "SELECT idMunicipio,nombreMpio from Municipio M 
         join Departamento D on M.Departamento_idDepartamento = D.idDepartamento 
         where idMunicipio = " . $obj->getIdMunicipio() . "";
         $this->objCon->Execute($sql);
