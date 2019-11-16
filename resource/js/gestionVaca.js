@@ -159,6 +159,7 @@ function eliminarVaca() {
           limpiar();
           alert("Eliminado con exito");
           listarVaca();
+          limpiar();
         } else {
           alert("No se pudo eliminar");
           limpiar();

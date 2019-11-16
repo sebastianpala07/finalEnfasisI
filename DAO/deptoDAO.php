@@ -10,7 +10,7 @@ class deptoDAO {
     }
 
     public function guardar(clsDepto $obj){
-        $sql = "INSERT INTO Departamento(nombreDepto) " . "VALUES (". $obj->getNombreDepto() . ")";
+        $sql = "INSERT INTO Departamento (nombreDepto) " . "VALUES ('". $obj->getNombreDepto() . "')";
         $this->objCon->ExecuteTransaction($sql);
     }
 
@@ -21,13 +21,13 @@ class deptoDAO {
     }
 
     public function eliminar(clsDepto $obj)
-    {
-        $sql = "DELETE from Departamento where idDepartamento=" . $obj->getIdDepartamento() . "";
+    {   
+        $sql = "DELETE from departamento where idDepartamento=" . $obj->getIdDepartamento() . "";
         $this->objCon->ExecuteTransaction($sql);
     }
 
     public function modificar(clsDepto $obj){
-        $sql = "UPDATE Departamento SET nombreDepto='" . $obj->getNombreDepto() . "'," . " where idDepartamento=" . $obj->getIdDepartamento() ."";
+        $sql = "UPDATE departamento SET nombreDepto='" . $obj->getNombreDepto(). "'" . " where idDepartamento=" . $obj->getIdDepartamento() ."";
         $this->objCon->ExecuteTransaction($sql);
     }
     
